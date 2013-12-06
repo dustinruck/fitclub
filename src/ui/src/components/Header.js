@@ -17,6 +17,7 @@ function Header() {
                     <Nav.Link as={Link} to="/calendar">Calendar</Nav.Link>
                     <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
                     <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
+                    <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
 
                     <Nav.Link as={Link} to="/login">Login</Nav.Link>
                     <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
