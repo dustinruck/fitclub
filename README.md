@@ -11,9 +11,11 @@ Backend: Spring Boot, Spring Security, JWT, OAuth2
 
 Database: ?? MongoDB/MySQL/PostgreSQL/Azure SQL Database/Google Cloud SQL/Amazon RDS/...
 
-Deployment: ?? Heroku, AWS, Azure, Google Cloud Platform
+Deployment: ?? Heroku, AWS, Azure, Google Cloud Platform, Firebase, ...
 
 Development: Git, GitHub, Jira, Teams, Visual Studio Code, IntelliJ IDEA, Postman
+
+API's: Stripe, ...
 
 Maybe: Google Analytics, Youtube API, Google Calendar API,
 
