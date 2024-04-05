@@ -1,0 +1,59 @@
+{
+    "classes": [
+      {
+        "name": "Yoga",
+        "times": "Monday, Wednesday, Friday 6:00am - 7:00am",
+        "location": "Yoga Studio",
+        "instructor": "Jane Doe",
+        "capacity": 15,
+        "description": "Yoga is an Indian physical and spiritual discipline that combines breath control, simple meditation, and the adoption of specific bodily postures.",
+        "image": "https://www.yogajournal.com/.image/t_share/MTQ2MzQ1MzQ0NjQwNjYwNzIw/yj-2016-07-07-summer-solstice-1080-1.jpg"
+      },
+      {
+        "name": "Zumba",
+        "times": "Tuesday, Thursday 6:00pm - 7:00pm",
+        "location": "Group Fitness Studio",
+        "instructor": "John Doe",
+        "capacity": 20,
+        "description": "Zumba is a dance fitness program created by Colombian dancer and choreographer Alberto 'Beto' Perez during the 1990s.",
+        "image": "placeholder"
+      },
+      {
+        "name": "Spin",
+        "times": "Monday, Wednesday, Friday 5:00pm - 6:00pm",
+        "location": "Cycling Studio",
+        "instructor": "Jane Doe",
+        "capacity": 20,
+        "description": "Spin is a form of indoor cycling that simulates road biking. It is a high-intensity workout that generally takes place on a stationary machine with a heavy, weighted flywheel that is linked to the pedals.",
+        "image": "placeholder"
+      },
+      {
+        "name": "Pilates",
+        "times": "Tuesday, Thursday 6:00am - 7:00am",
+        "location": "Pilates Studio",
+        "instructor": "John Doe",
+        "capacity": 30,
+        "description": "Pilates is a physical fitness system developed in the early 20th century by Joseph Pilates, after whom it was named. It is practiced worldwide, especially in Western countries such as Australia, Canada, the United States, and the United Kingdom.",
+        "image": "placeholder"
+      },
+      {
+        "name": "Bootcamp",
+        "times": "Monday, Wednesday, Friday 6:00pm - 7:00pm",
+        "location": "Group Fitness Studio",
+        "instructor": "Jane Doe",
+        "capacity": 30,
+        "description": "Bootcamp is a type of group physical training program conducted by gyms, personal trainers, and former military personnel. These programs are designed to build strength and fitness through a variety of types of exercise.",
+        "image": "placeholder"
+      },
+      {
+        "name": "HIIT",
+        "times": "Tuesday, Thursday 6:00pm - 7:00pm",
+        "location": "Group Fitness Studio",
+        "instructor": "John Doe",
+        "capacity": 40,
+        "description": "High-intensity interval training (HIIT) is a form of interval training, a cardiovascular exercise strategy alternating short periods of intense anaerobic exercise with less intense recovery periods, until too exhausted to continue.",
+        "image": "placeholder"
+      }
+    ]
+  }
+  
