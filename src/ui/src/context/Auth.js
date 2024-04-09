@@ -1,10 +1,29 @@
-// Auth Context //
+// Auth.js //
 
-import React, { useContext, createContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { createContext, useReducer } from 'react';
+import AuthReducer from './AuthReducer';
 
-const AuthContext = createContext();
+// initial state
+const initialState = {
+  user: null,
+};
 
-export const useAuth = () => {
-    return useContext(AuthContext);
-}
+// create context
+export const AuthContext = createContext(initialState);
+
+// provider
+export const AuthProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(AuthReducer, initialState);
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user: state.user,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+
