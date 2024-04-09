@@ -12,6 +12,8 @@ import BlogPage from './pages/BlogPage';
 import BlogPost from './pages/BlogPost';
 import CalendarPage from './pages/CalendarPage';
 import ProfilePage from './pages/ProfilePage';
+import TrainersPage from './pages/TrainersPage';
+
 
 function App() {
     return (
@@ -29,6 +31,7 @@ function App() {
                 <Route path="/blog/:id" element={<BlogPost />} />
                 <Route path="/calendar" element={<CalendarPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
+                <Route path="/trainers" element={<TrainersPage />} />
 
             </Routes>
         </Router>
