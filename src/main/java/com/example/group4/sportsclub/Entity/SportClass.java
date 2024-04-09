@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "Classes")
+@Table(name = "classes")
 public class SportClass {
 
     @Id
