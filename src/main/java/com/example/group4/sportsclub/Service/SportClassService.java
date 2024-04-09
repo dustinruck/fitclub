@@ -5,6 +5,9 @@ import com.example.group4.sportsclub.Repository.SportClassRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.springframework.util.StringUtils;
+import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -19,6 +22,14 @@ public class SportClassService {
 
     @Autowired
     private SportClassRepository sportClassRepository;
+
+    public SportClassService(SportClassRepository sportClassRepository) {
+        this.sportClassRepository = sportClassRepository;
+    }
+
+    // private SportClass translateWebToDb(SportClass sportClass) {
+    //     SportClass entity = new SportClass();
+    //     }
 
     public List<SportClass> getAllSportClasses() {
         return sportClassRepository.findAll();
