@@ -8,28 +8,28 @@ const Trainers = () => {
 
     // Fetch all trainers
     useEffect(() => {
-        fetchTrainers();
+        getAllTrainers();
     }, []);
 
-    const fetchTrainers = async () => {
+    const getAllTrainers = async () => {
         const response = await axios.get('/api/trainers');
         setTrainers(response.data);
     };
 
     // Add or update trainer
-    const saveTrainer = async () => {
+    const createTrainer = async () => {
         if (editingId) {
             await axios.put(`/api/trainers/${editingId}`, newTrainer);
         } else {
             await axios.post('/api/trainers', newTrainer);
         }
-        fetchTrainers(); // Refresh the list
+        getAllTrainers(); // Refresh the list
         setNewTrainer({ name: '', specialty: '', bio: '' }); // Reset form
         setEditingId(null); // Reset editing state
     };
 
     // Start editing a trainer
-    const editTrainer = (trainer) => {
+    const updateTrainer = (trainer) => {
         setEditingId(trainer.id);
         setNewTrainer({ name: trainer.name, specialty: trainer.specialty, bio: trainer.bio });
     };
@@ -37,7 +37,7 @@ const Trainers = () => {
     // Delete a trainer
     const deleteTrainer = async (id) => {
         await axios.delete(`/api/trainers/${id}`);
-        fetchTrainers(); // Refresh the list
+        getAllTrainers(); // Refresh the list
     };
 
     return (
@@ -61,13 +61,13 @@ const Trainers = () => {
                     value={newTrainer.bio}
                     onChange={(e) => setNewTrainer({ ...newTrainer, bio: e.target.value })}
                 />
-                <button onClick={saveTrainer}>{editingId ? 'Update' : 'Add'}</button>
+                <button onClick={createTrainer}>{editingId ? 'Update' : 'Add'}</button>
             </div>
             <ul>
                 {trainers.map((trainer) => (
                     <li key={trainer.id}>
                         {trainer.name} - {trainer.specialty}
-                        <button onClick={() => editTrainer(trainer)}>Edit</button>
+                        <button onClick={() => updateTrainer(trainer)}>Edit</button>
                         <button onClick={() => deleteTrainer(trainer.id)}>Delete</button>
                     </li>
                 ))}
