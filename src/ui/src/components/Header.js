@@ -23,7 +23,7 @@ function Header() {
                     <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
                     <Nav.Link as={Link} to="/signup">Signup</Nav.Link>
                 </Nav>
-                <LoginButton />
+                {/* <LoginButton /> */}
             </Navbar.Collapse>
         </Navbar>
     );
