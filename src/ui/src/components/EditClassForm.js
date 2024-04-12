@@ -40,7 +40,7 @@ function EditClassForm({ classItem, onClose }) {
     };
 
     try {
-      await axios.put(`/api/sport-classes/${classItem.id}`, updatedClass);
+      await axios.put(`/api/classes/${classItem.id}`, updatedClass);
       onClose(); // refresh class list and close form
     } catch (error) {
       console.error('Failed to update class:', error);
