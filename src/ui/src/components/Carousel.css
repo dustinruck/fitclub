@@ -1,0 +1,17 @@
+.margin-middle {
+    margin-bottom: 150px;
+    padding-left: 25vh;
+    padding-right: 25vh;
+    text-align: justify;
+}
+
+.btn1 {
+    background-color: rgb(252, 250, 248); 
+    height: 50px;
+    border: 1px solid white;
+}
+
+.btn1:hover {
+    background:transparent;
+    color: white;
+}
