@@ -9,6 +9,7 @@ import LogoutButton from '../components/LogoutButton';
 import SignupButton from '../components/SignupButton';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import MyCarousel from '../components/Carousel';
 
 function HomePage() {
     // const { authTokens } = useAuth();
@@ -18,8 +19,9 @@ function HomePage() {
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand>Home</Navbar.Brand>
             </Navbar>
+            
             <div>
-                <h2>Welcome to the Home Page</h2>
+                <MyCarousel />
                 {/* {authTokens ? <LogoutButton /> : <SignupButton />} */}
             </div>
             <Footer />
