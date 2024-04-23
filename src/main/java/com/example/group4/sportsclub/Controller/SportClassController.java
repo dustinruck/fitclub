@@ -16,7 +16,7 @@ import java.util.Optional;
  * Project: sportsClub
  */
 @RestController
-@RequestMapping("/sport-classes")
+@RequestMapping("/api/classes")
 public class SportClassController {
 
     @Autowired

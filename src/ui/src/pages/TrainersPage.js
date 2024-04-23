@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Trainers = () => {
+const TrainersPage = () => {
     const [trainers, setTrainers] = useState([]);
     const [newTrainer, setNewTrainer] = useState({ name: '', specialty: '', bio: '' });
     const [editingId, setEditingId] = useState(null);
@@ -76,4 +76,4 @@ const Trainers = () => {
     );
 };
 
-export default Trainers;
+export default TrainersPage;
