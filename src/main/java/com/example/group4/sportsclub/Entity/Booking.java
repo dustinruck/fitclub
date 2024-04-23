@@ -1,5 +1,6 @@
 package com.example.group4.sportsclub.Entity;
 
+import com.example.group4.sportsclub.user.User;
 import lombok.*;
 import jakarta.persistence.*;
 @Data
