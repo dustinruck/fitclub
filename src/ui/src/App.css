@@ -1,7 +1,32 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  border: 1px solid 3d3d3d;
+  margin: 50px 30px;
+  padding: 25px 15px;
 }
 
+.to-do-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do-container ul li{
+  width: 170px;
+  overflow-wrap: break-word;
+  list-style-type: "➡️";
+  cursor: pointer;
+}
+
+.done{
+  text-decoration: line-through;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
