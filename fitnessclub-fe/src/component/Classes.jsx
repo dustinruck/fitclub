@@ -10,7 +10,7 @@ const Classes = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     useEffect(() => {
-        axios.get('api/classes')
+        axios.get('/classes')
         .then(response => {
             setClasses(response.data);
         })
