@@ -1,58 +1,56 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
 function LoginPage() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [formData, setFormData] = useState({
+        username: '',
+        password: '',
+    });
+    const [error, setError] = useState('');
     const history = useHistory();
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         try {
-            const response = await fetch('/api/v1/auth', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ username, password }),
+            const response = await axios.post('/api/v1/auth/authenticate', {
+                username: formData.username,
+                password: formData.password,
             });
 
-            if (response.ok) {
+            if (response.status === 200) {
+                // Save JWT token to local storage or session storage
+                localStorage.setItem('token', response.data.token);
+                // Redirect to desired page, for example '/classes'
                 history.push('/classes');
             } else {
-                // Handle unsuccessful login
-                console.error('Login failed');
+                setError("Invalid username or password");
             }
         } catch (error) {
-            console.error('Login failed', error);
+            console.error("Login error", error);
+            setError("Invalid username or password");
         }
-    };
+    }
 
     return (
         <div>
             <h1>Login</h1>
+            {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="formBasicUsername">
+                <Form.Group controlId="username">
                     <Form.Label>Username</Form.Label>
-                    <Form.Control
-                        type="text"
-                        placeholder="Username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
+                    <Form.Control type="text" placeholder="Username" value={formData.username} onChange={handleChange} />
                 </Form.Group>
 
-                <Form.Group controlId="formBasicPassword">
+                <Form.Group controlId="password">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
+                    <Form.Control type="password" placeholder="Password" value={formData.password} onChange={handleChange} />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">

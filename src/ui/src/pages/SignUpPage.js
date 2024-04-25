@@ -27,24 +27,17 @@ function SignUpPage() {
             return;
         }
         try {
-            const response = await fetch('/api/v1/auth/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    username: formData.username,
-                    firstname: formData.firstname,
-                    lastname: formData.lastname,
-                    password: formData.password,
-                    email: formData.email,
-                }),
+            const response = await axios.post('/api/v1/auth/register', {
+                username: formData.username,
+                firstname: formData.firstname,
+                lastname: formData.lastname,
+                password: formData.password,
+                email: formData.email,
             });
 
-            if (response.ok) {
-                const data = await response.json();
+            if (response.status === 200) {
                 setUserCreated(true);
-                setNewUserInfo(data);
+                setNewUserInfo(response.data);
             } else {
                 setError("Error during sign up.");
             }
