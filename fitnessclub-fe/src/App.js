@@ -10,6 +10,7 @@ import ChildCare from "./component/ChildCare";
 import Passion from "./component/Passion";
 import MemberShip from "./component/MemberShip";
 import AboutClub from "./component/AboutClub";
+
 function App() {
   const images = [
     "https://active-living.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/FitnessCentre_011A0104_F%20web%20a.jpg?h=1abb87fb&itok=bB078foJ",

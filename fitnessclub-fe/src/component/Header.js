@@ -56,14 +56,16 @@ const Header = () => {
         >
           <div className="navbar-end ">
             <Link className="navbar-item has-text-weight-semibold has-text-black" to="/classes">
-              FITNESS & PROGRAMS
+              CLASSES
             </Link>
-            <Link className="navbar-item has-text-weight-semibold has-text-black">
-              CLASS SCHEDUEL
+            <Link className="navbar-item has-text-weight-semibold has-text-black" to="/trainerspage">
+              TRAINERS
             </Link>
-            <Link className="navbar-item has-text-weight-semibold has-text-black">NEWS</Link>
-            <Link className="navbar-item has-text-weight-semibold has-text-black">
-              SHEDULE A TOUR
+            <Link className="navbar-item has-text-weight-semibold has-text-black" to="/calendar">
+              CALENDAR
+            </Link>
+              <Link className="navbar-item has-text-weight-semibold has-text-black" to="/register">
+              REGISTER
             </Link>
           </div>
           <div className="navbar-end">
