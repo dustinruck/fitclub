@@ -1,3 +1,5 @@
+// SportClass.java // src/main/java/com/example/group4/sportsclub/Entity/SportClass.java //
+
 package com.example.group4.sportsclub.Entity;
 
 import jakarta.persistence.*;

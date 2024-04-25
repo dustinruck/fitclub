@@ -1,3 +1,5 @@
+// Header.js // src/component/Header.js //
+
 import { Outlet, Link } from "react-router-dom";
 import "bulma/css/bulma.min.css";
 import React, { useState, useEffect } from "react";
@@ -56,14 +58,16 @@ const Header = () => {
         >
           <div className="navbar-end ">
             <Link className="navbar-item has-text-weight-semibold has-text-black" to="/classes">
-              FITNESS & PROGRAMS
+              CLASSES
+            </Link>
+            <Link className="navbar-item has-text-weight-semibold has-text-black" to="/trainers">
+              TRAINERS
             </Link>
             <Link className="navbar-item has-text-weight-semibold has-text-black">
-              CLASS SCHEDUEL
+              PAYMENT
             </Link>
-            <Link className="navbar-item has-text-weight-semibold has-text-black">NEWS</Link>
             <Link className="navbar-item has-text-weight-semibold has-text-black">
-              SHEDULE A TOUR
+              MY PROFILE
             </Link>
           </div>
           <div className="navbar-end">

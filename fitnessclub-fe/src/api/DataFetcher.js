@@ -1,6 +1,7 @@
+// DataFetcher.js // src/api/DataFetcher.js //
+
 import { useEffect, useRef, useState } from "react";
 
-import { Axios } from "axios";
 import axios from "axios";
 import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
 import Header from "../component/Header";

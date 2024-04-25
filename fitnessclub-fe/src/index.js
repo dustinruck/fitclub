@@ -1,4 +1,7 @@
+// index.js // 
+
 import React from 'react';
+import axios from 'axios';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';

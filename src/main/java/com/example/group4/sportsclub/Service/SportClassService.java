@@ -1,3 +1,5 @@
+// SportClassService.java // src/main/java/com/example/group4/sportsclub/Service/SportClassService.java //
+
 package com.example.group4.sportsclub.Service;
 
 import com.example.group4.sportsclub.Entity.SportClass;

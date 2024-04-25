@@ -1,3 +1,5 @@
+// // User.java // src/main/java/com/example/group4/sportsclub/Entity/User.java //
+
 // package com.example.group4.sportsclub.Entity;
 
 // import jakarta.persistence.Entity;

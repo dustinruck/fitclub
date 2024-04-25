@@ -1,3 +1,5 @@
+// SportClassController.java // src/main/java/com/example/group4/sportsclub/Controller/SportClassController.java //
+
 package com.example.group4.sportsclub.Controller;
 
 import com.example.group4.sportsclub.Entity.SportClass;
