@@ -1,7 +1,7 @@
 // Classes.jsx // src/component/Classes.jsx //
 
 import React, { useState, useEffect } from 'react';
-import axios from '../api/axiosConfig';
+import axiosInstance from '../api/axiosConfig';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -10,7 +10,7 @@ const Classes = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     useEffect(() => {
-        axios.get('/classes')
+        axiosInstance.get('/classes')
         .then(response => {
             setClasses(response.data);
         })
@@ -46,6 +46,7 @@ const Classes = () => {
                 </div>
                 ))}
             </div>
+            <p>This is the Classes Page</p>
             </div>
             <Footer/>
         </div>

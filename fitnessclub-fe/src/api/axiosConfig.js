@@ -13,7 +13,7 @@ axiosInstance.interceptors.response.use(
   response => response,
   error => {
     console.error('API call failed: ', error.response || error.message);
-    alert('An error occurred while fetching data!');
+    alert('An error occurred while fetching data! API!');
     return Promise.reject(error);
   }
 );

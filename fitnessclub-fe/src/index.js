@@ -1,7 +1,6 @@
 // index.js // 
 
 import React from 'react';
-import axios from 'axios';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
@@ -11,9 +10,10 @@ import 'bulma/css/bulma.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Login from './component/Login';
 import Classes from './component/Classes';
-import DataFetcher from './api/DataFetcher';
+// import DataFetcher from './api/DataFetcher';
 import Add from './component/Add';
 import Contact from './component/Contact';
+import Trainers from './component/TrainersPage';
 import Register from './component/Register';
 import Pricing from './component/Pricing';
 
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
   {
     path:'/trainers',
    
-    element:<DataFetcher/>,
+    element:<Trainers/>,
     
   },
   {
