@@ -62,10 +62,10 @@
 
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
-import Header from './Header';  // Import the Header component
+import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -73,7 +73,7 @@ function Login() {
         password: '',
     });
     const [error, setError] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -89,7 +89,7 @@ function Login() {
 
             if (response.status === 200) {
                 localStorage.setItem('token', response.data.token);
-                history.push('/classes');
+                navigate('/classes');  // Use navigate instead of history.push
             } else {
                 setError("Invalid username or password");
             }

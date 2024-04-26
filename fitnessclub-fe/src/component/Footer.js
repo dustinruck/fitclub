@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <div className="content has-text-centered">
+        <div className="content has-text-centered has-text-white">
           <p className="has-text-weight-bold">Copyright © Fitness Club</p>
         </div>
 
@@ -17,14 +17,15 @@ const Footer = () => {
             <h4
               className="bd-footer-title  
                  has-text-weight-medium 
-                 has-text-left"
+                 has-text-left
+                 has-text-white"
             >
               FITNESS CLUB
             </h4>
 
             <p
               className="bd-footer-link  
-                has-text-left"
+                has-text-left has-text-white"
             >
               This web application designed and Implemented by Group 4
             </p>
@@ -34,7 +35,8 @@ const Footer = () => {
             <h4
               className="bd-footer-title  
                  has-text-weight-medium  
-                 has-text-justify"
+                 has-text-justify
+                 has-text-white"
             >
               Explore
             </h4>
@@ -53,7 +55,8 @@ const Footer = () => {
               </a>
               <br />
               <a href="https://">
-                <span className="icon-text has-text-vimeo">
+                <span className="icon-text has-text-vimeo
+                has-text-white">
                   <span>Careers</span>
                 </span>
               </a>
@@ -64,7 +67,8 @@ const Footer = () => {
             <h4
               className="bd-footer-title 
                  has-text-weight-medium 
-                 has-text-justify"
+                 has-text-justify
+                 has-text-white"
             >
               Contact us
             </h4>
@@ -92,13 +96,13 @@ const Footer = () => {
         </div>
         <div>
        
-          <a>
+          <a className="has-text-white">
           <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a>
+          <a className="has-text-white">
           <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a>
+          <a className="has-text-white">
           <FontAwesomeIcon icon={faYoutube} />
           </a>
 

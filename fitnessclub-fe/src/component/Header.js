@@ -66,7 +66,7 @@ const Header = () => {
             <Link className="navbar-item has-text-weight-semibold has-text-black" to="/payment">
               PAYMENT
             </Link>
-            <Link className="navbar-item has-text-weight-semibold has-text-black" to="/user">
+            <Link className="navbar-item has-text-weight-semibold has-text-black" to="/users">
               MY PROFILE
             </Link>
           </div>
