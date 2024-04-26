@@ -17,10 +17,10 @@ const Passion = () => {
         </div>
         <div className="column is-6">
           <div className="content ">
-            <p className="is-size-2 has-text-left has-text-weight-bold has-text-black">
-            your passion for wellness is our mission​
+            <p className="is-size-2 has-text-left has-text-weight-bold has-text-white">
+            Your Passion for Wellness is Our Mission​
             </p>
-            <p className="is-size-6 has-text-left has-text-black">
+            <p className="is-size-6 has-text-left has-text-white">
             At our fitness club, your passion for wellness is our mission. 
             We're committed to providing unlimited access to top-tier facilities, personalized training, and a supportive community dedicated to helping you achieve your fitness goals. 
             Join us today and let us make your journey to health and happiness our priority.

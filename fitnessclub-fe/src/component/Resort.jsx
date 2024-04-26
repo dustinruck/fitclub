@@ -8,15 +8,15 @@ const Resort = ({ resortImages }) => {
     <>
       <div className="columns is-mobile  ">
         <div className="column is-half is-offset-one-quarter mt-6">
-          <p className="is-size-2 has-text-centered has-text-weight-bold has-text-black">
+          <p className="is-size-2 has-text-centered has-text-weight-bold has-text-white">
             Resort Environments
           </p>
         </div>
       </div>
 
       <div className="columns is-mobile  ">
-        <div className="column is-half is-offset-one-quarter has-text-black">
-          <p className="is-size-6 has-text-centered has-text-black ">
+        <div className="column is-half is-offset-one-quarter has-text-white">
+          <p className="is-size-6 has-text-centered has-text-white ">
             Fitness is only one aspect of a healthy lifestyle. spend a day at
             the spa, a bite with friends.
             <br />

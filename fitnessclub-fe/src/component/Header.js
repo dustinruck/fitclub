@@ -24,7 +24,7 @@ const Header = () => {
             <img
               style={{ zIndex: "+1" }}
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToe5oBRODC80yLLssXNvXQ7pkiNMH0agfhHA&s"
-              width="150"
+              width="130"
               height="28"
               alt="GFG"
             />

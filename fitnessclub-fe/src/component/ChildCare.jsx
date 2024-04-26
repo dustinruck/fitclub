@@ -8,10 +8,10 @@ const ChildCare = () => {
       <div className="columns  mt-6">
         <div className="column is-6">
           <div className="content ">
-            <p className="is-size-2 has-text-left has-text-weight-bold has-text-black">
+            <p className="is-size-2 has-text-left has-text-weight-bold has-text-white">
               CHILDCARE INCLUDED WITH FAMILY MEMBERSHIP​​​
             </p>
-            <p className="is-size-6 has-text-left has-text-black">
+            <p className="is-size-6 has-text-left has-text-white">
               Experience peace of mind and convenience with our unlimited
               childcare service. Entrust your little ones to our expert
               caregivers while you pursue your fitness goals worry-free. Join
