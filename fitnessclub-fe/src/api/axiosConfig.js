@@ -6,12 +6,13 @@ const BASE_URL = 'http://localhost:8080/api';
 
 
 export default axios.create({
-  baseURL: BASE_URL
+  baseURL: BASE_URL,
+  headers: { 'Content-Type': 'application/json' }
 });
 
 export const axiosJWT = axios.create({
   baseURL: BASE_URL,
-  headers: { 'Content-Type': 'application/json' },
+  headers: { 'Content-Type': 'application/json' }
 });
 
 axios.interceptors.response.use(
