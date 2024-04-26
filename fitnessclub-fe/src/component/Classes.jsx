@@ -1,16 +1,17 @@
 // Classes.jsx // src/component/Classes.jsx //
 
 import React, { useState, useEffect } from 'react';
-import axiosInstance from '../api/axiosConfig';
+import axios from '../api/axiosConfig';
 import Header from './Header';
 import Footer from './Footer';
+import { Container, Card } from 'react-bootstrap';
 
 const Classes = () => {
     const [classes, setClasses] = useState([]);
     const [activeIndex, setActiveIndex] = useState(null);
 
     useEffect(() => {
-        axiosInstance.get('/classes')
+        axios.get('/classes/')
         .then(response => {
             setClasses(response.data);
         })

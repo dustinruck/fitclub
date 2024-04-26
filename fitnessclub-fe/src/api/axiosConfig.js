@@ -2,14 +2,19 @@
 
 import axios from 'axios';
 
-const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8080/api',
-  headers: {
-    'Content-Type': 'application/json'
-  }
+const BASE_URL = 'http://localhost:8080/api';
+
+
+export default axios.create({
+  baseURL: BASE_URL
 });
 
-axiosInstance.interceptors.response.use(
+export const axiosJWT = axios.create({
+  baseURL: BASE_URL,
+  headers: { 'Content-Type': 'application/json' },
+});
+
+axios.interceptors.response.use(
   response => response,
   error => {
     console.error('API call failed: ', error.response || error.message);
@@ -17,5 +22,3 @@ axiosInstance.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
-export default axiosInstance;
