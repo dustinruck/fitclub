@@ -16,14 +16,26 @@ import Contact from './component/Contact';
 import Trainers from './component/TrainersPage';
 import Register from './component/Register';
 import Pricing from './component/Pricing';
-import { Auth } from './context/Auth'
-
-
+import Pay from './component/Pay';
+import Success from './component/Success';
+import Fail from './component/Fail';
 
 const router = createBrowserRouter([
   {
     path:'/',
     element:<App/>,
+  },
+  {
+    path:'/payment',
+    element:<Pay/>,
+  },
+  {
+    path:'/success',
+    element:<Success/>,
+  },
+  {
+    path:'/fail',
+    element:<Fail/>,
   },
   {
     path:'/login',
