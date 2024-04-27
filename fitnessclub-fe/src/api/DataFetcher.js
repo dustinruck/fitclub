@@ -45,12 +45,33 @@ function DataFetcher() {
     });
   }, [picTriger]);
 
+  const token = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlhdCI6MTcxNDE5MTk2MywiZXhwIjoxNzE0Mjc4MzYzfQ.sjikShWh_4s31JvE44UAKScZF2-JdIuoUR1nUE3HBlw';
  
-  useEffect(() => {
-    fetch("http://localhost:8080/trainers")
+  /*useEffect(() => {
+    fetch("http://localhost:8080/api/trainers")
       .then((response) => response.json())
       .then((data) => setdata(data))
       .catch((error) => console.error("error fetching data:", error));
+  }, [triger]);*/
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        //const token = localStorage.getItem(token); // Retrieve the token from local storage
+        const response = await fetch("http://localhost:8080/api/trainers", {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        const data = await response.json();
+        setdata(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
   }, [triger]);
 
  
