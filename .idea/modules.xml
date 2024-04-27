@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JWT.iml" filepath="$PROJECT_DIR$/.idea/JWT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fitclub/sportsClub.iml" filepath="$PROJECT_DIR$/fitclub/sportsClub.iml" />
+    </modules>
+  </component>
+</project>

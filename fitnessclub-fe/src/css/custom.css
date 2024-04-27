@@ -1,0 +1,10 @@
+.custom-align-right {
+    display: block;
+    justify-content: flex-start;
+    margin-left: 150px;
+  }
+
+.custom-m-top{
+    margin-top: 2rem;
+}
+
