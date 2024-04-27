@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Modal, ModalHeader, ModalBody, Button } from 'reactstrap'; // Import Modal components from reactstrap
 
-// Assuming Login is a component you have that handles the login form
 import Login from './LoginForm'; 
 
 const Header = () => {
