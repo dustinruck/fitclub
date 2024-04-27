@@ -1,6 +1,6 @@
-// import { Form } from "react-router-dom";
-// import Header from "./Header";
-// import React from "react";
+ //import { Form } from "react-router-dom";
+
+ //import React from "react";
 // const Register = () => {
 //     const handelSignup = ()=>{
 
@@ -131,7 +131,9 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import Header from './Header';
+import Header from "./Header";
+//import { Button } from "react-bootstrap";
+//import Header from './Header';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -150,6 +152,7 @@ function Register() {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     }
 
+    const token = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWlsLmNvbSIsImlhdCI6MTcxNDE4NjQxNywiZXhwIjoxNzE0MjcyODE3fQ.oHGna9gv44V3-LNDjJRcXZz1v68AGdsC1ZY_eW2oJDo';
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (formData.password !== formData.passwordConfirmation) {
@@ -157,14 +160,18 @@ function Register() {
             return;
         }
         try {
-            const response = await axios.post('/api/v1/auth/register', {
+            const response = await axios.post('http://localhost:8080/api/v1/auth/register', {
                 username: formData.username,
                 firstname: formData.firstname,
                 lastname: formData.lastname,
                 password: formData.password,
                 email: formData.email,
+            }, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
             });
-
             if (response.status === 200) {
                 setUserCreated(true);
                 setNewUserInfo(response.data);
@@ -178,8 +185,10 @@ function Register() {
     }
 
     return (
-        <div>
-            <Header />
+        <>
+        <Header />
+         <div className='container'>
+            
               <h1>Sign Up</h1>
             {error && <Alert variant="danger">{error}</Alert>}
             <Form onSubmit={handleSubmit}>
@@ -226,6 +235,8 @@ function Register() {
                 </Alert>
             )}
         </div>
+        </>
+       
     );
 }
 
