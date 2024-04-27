@@ -20,7 +20,7 @@ const Trainers = () => {
               </figure>
             </div>
             <div className="card-content">
-              <p className="title is-4">{trainer.name}</p>
+              <p className="title is-4 has-text-black">{trainer.name}</p>
               <p className="subtitle is-6">
                 <NavLink to={`/classes`}>{trainer.specialty}</NavLink>
               </p>
