@@ -9,7 +9,7 @@ const ChildCare = () => {
         <div className="column is-6">
           <div className="content ">
             <p className="is-size-2 has-text-left has-text-weight-bold has-text-white">
-              CHILDCARE INCLUDED WITH FAMILY MEMBERSHIP​​​
+              CHILDCARE INCLUDED WITH PREMIUM MEMBERSHIP​​​
             </p>
             <p className="is-size-6 has-text-left has-text-white">
               Experience peace of mind and convenience with our unlimited

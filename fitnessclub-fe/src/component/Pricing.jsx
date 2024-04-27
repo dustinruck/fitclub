@@ -4,7 +4,7 @@ import '../css/pricing.css'
 const Pricing = () => {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
     <section className="section">
 	<div className="container">
 		<h1 className="title is-1 has-text-centered has-text-weight-bold">

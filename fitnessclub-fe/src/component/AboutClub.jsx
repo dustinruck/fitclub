@@ -7,12 +7,12 @@ const AboutClub = () => {
     <div className="container mt-6" style={{width:'600px'}}>
       <div className="content has-text-black mt-6">
         <div>
-          <p className="is-size-2 has-text-centered has-text-white has-text-weight-bold mt-6">
+          <p className="is-size-2 has-text-centered has-text-black has-text-weight-bold mt-6">
             Elevate Your Fitness, Unleash Your Potential
           </p>
         </div>
         <div>
-          <p className="is-size-6 has-text-centered has-text-white mt-6">
+          <p className="is-size-6 has-text-centered has-text-black mt-6">
             At our fitness club, we're dedicated to revolutionizing your
             wellness journey. With unlimited access, cutting-edge equipment, and
             expert guidance, we're committed to helping you surpass your fitness

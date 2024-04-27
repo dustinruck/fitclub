@@ -13,6 +13,11 @@ import ChildCare from "./component/ChildCare";
 import Passion from "./component/Passion";
 import MemberShip from "./component/MemberShip";
 import AboutClub from "./component/AboutClub";
+import Classes from "./component/Classes";
+import Trainers from "./component/Trainers";
+import Pricing from "./component/Pricing";
+import Payment from "./component/Payment";
+
 function App() {
   const images = [
     "https://active-living.ucalgary.ca/sites/default/files/styles/ucws_image_desktop/public/2019-10/FitnessCentre_011A0104_F%20web%20a.jpg?h=1abb87fb&itok=bB078foJ",
@@ -50,6 +55,10 @@ function App() {
       <br />
       <div className="container">
         <AboutClub />
+        <Classes />
+        <Trainers />
+        <Pricing />
+        <Payment />
         <Resort resortImages={resortImages} />
         <Explore fitnessImages={fitnessImages} />
         <Tennis />
