@@ -1,4 +1,4 @@
-// index.js // 
+// index.js // src/index.js //
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import Login from './component/LoginForm';
+import Login from './component/Login';
 import Classes from './component/Classes';
 // import DataFetcher from './api/DataFetcher';
 import Payment from './component/Payment';
@@ -16,6 +16,9 @@ import Contact from './component/Contact';
 import Trainers from './component/TrainersPage';
 import Register from './component/Register';
 import Pricing from './component/Pricing';
+import { Auth } from './context/Auth'
+
+
 
 const router = createBrowserRouter([
   {
@@ -58,7 +61,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* <Auth> */}
     <RouterProvider router={router} />
+    {/* <App /> */}
+    {/* </Auth> */}
   </React.StrictMode>
 );
 
