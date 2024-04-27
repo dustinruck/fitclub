@@ -11,7 +11,7 @@ const ChildCare = () => {
             <p className="is-size-2 has-text-left has-text-weight-bold has-text-white">
               CHILDCARE INCLUDED WITH PREMIUM MEMBERSHIP​​​
             </p>
-            <p className="is-size-6 has-text-left has-text-white">
+            <p className="is-size-6 has-text-left has-text-black">
               Experience peace of mind and convenience with our unlimited
               childcare service. Entrust your little ones to our expert
               caregivers while you pursue your fitness goals worry-free. Join
@@ -21,7 +21,7 @@ const ChildCare = () => {
               <br />
             </p>
             <Link className=" has-text-weight-bold button is-dark is-meduim mt-2 check">
-              DISCOVER CHILDCARE
+              VIP'S CHILDCARE
             </Link>
           </div>
         </div>

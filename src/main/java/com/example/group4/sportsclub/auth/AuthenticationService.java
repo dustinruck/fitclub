@@ -1,3 +1,5 @@
+// AuthenticationService.java // src/main/java/com/example/group4/sportsclub/auth/AuthenticationService.java //
+
 package com.example.group4.sportsclub.auth;
 
 import com.example.group4.sportsclub.config.JwtService;

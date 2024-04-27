@@ -1,3 +1,5 @@
+// AuthenticationRequest.java // src/main/java/com/example/group4/sportsclub/auth/AuthenticationRequest.java //
+
 package com.example.group4.sportsclub.auth;
 
 import lombok.AllArgsConstructor;

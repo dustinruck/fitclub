@@ -17,10 +17,10 @@ const Tennis = () => {
         </div>
         <div className="column is-6 ">
           <div className="content has-text-black">
-            <p className="is-size-2 has-text-left has-text-weight-bold has-text-white">
-              TENNIS, THE GAME YOU'LL LOVE FOR LIFE​
+            <p className="is-size-2 has-text-left has-text-weight-bold has-text-black">
+              TENNIS, YOU'LL LOVE IT!
             </p>
-            <p className="is-size-6 has-text-left has-text-white">
+            <p className="is-size-6 has-text-left has-text-black">
               Serve up your best game with our unbeatable offer of unlimited
               access to our premier tennis club. Smash your way to success on
               our top-notch courts, hone your skills with professional coaching,

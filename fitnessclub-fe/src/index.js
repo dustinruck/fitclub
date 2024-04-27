@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.min.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import Login from './component/Login';
+import Login from './component/LoginForm';
 import Classes from './component/Classes';
 // import DataFetcher from './api/DataFetcher';
 import Payment from './component/Payment';

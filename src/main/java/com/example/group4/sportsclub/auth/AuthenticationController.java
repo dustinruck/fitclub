@@ -1,3 +1,5 @@
+// AuthenticationController.java // src/main/java/com/example/group4/sportsclub/auth/AuthenticationController.java //
+
 package com.example.group4.sportsclub.auth;
 
 import jakarta.servlet.http.HttpServletRequest;

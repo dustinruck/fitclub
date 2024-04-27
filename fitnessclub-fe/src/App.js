@@ -1,4 +1,4 @@
-// App.js //
+// App.js // src/App.js //
 
 
 import React from "react";

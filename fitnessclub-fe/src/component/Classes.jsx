@@ -2,9 +2,9 @@
 import React from 'react';
 
 const classesData = [
-  { name: 'Yoga', description: 'Improve flexibility and calm your mind.', trainer: 'Louis', times: 'Wed & Fri at 7 AM', imageUrl: 'path_to_image' },
-  { name: 'Weightlifting', description: 'Gain strength and build muscle.', trainer: 'Gabriela', times: 'Mon & Thu at 6 PM', imageUrl: 'path_to_image' },
-  { name: 'Cardio', description: 'Boost your heart health.', trainer: 'Samantha', times: 'Tue & Sat at 8 AM', imageUrl: 'path_to_image' }
+  { name: 'Yoga', description: 'Improve flexibility and calm your mind.', trainer: 'Louis', times: 'Wed & Fri at 7 AM', imageUrl: 'https://imagez.tmz.com/image/89/4by3/2022/01/11/891df807b3be4aedb37b5a2280bfa863_xl.jpg' },
+  { name: 'Weightlifting', description: 'Gain strength and build muscle.', trainer: 'Gabriela', times: 'Mon & Thu at 6 PM', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtue2vPTGTkQ5iiZYnJOHpmJmqpgitQyzUJnnybMPD_A&s' },
+  { name: 'Cardio', description: 'Boost your heart health.', trainer: 'Samantha', times: 'Tue & Sat at 8 AM', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkQYZdrG3jFHmubpOEYaIYiaTnQGy1-4K7fgYQerTGrQ&s' }
 ];
 
 const Classes = () => {
@@ -14,12 +14,13 @@ const Classes = () => {
         <div className="column is-one-third" key={classItem.name}>
           <div className="card" id='classes'>
             <div className="card-image">
-              <figure className="image is-4by3">
+              <figure className="image is-6by5">
                 <img src={classItem.imageUrl} alt={classItem.name} />
               </figure>
             </div>
             <div className="card-content">
-              <p className="title is-4">{classItem.name}</p>
+              <p className="title is-4 has-text-weight-bold has-text-black">{classItem.name}</p>
+              <div></div>
               <p className="subtitle is-6">
                 Trainer: <a href="#trainers">{classItem.trainer}</a>
               </p>
@@ -28,7 +29,7 @@ const Classes = () => {
                 <br/>
                 <small>{classItem.times}</small>
               </div>
-              <a href="#pricing" className="button is-primary">Sign Up</a>
+              <a href="/pricing" className="button is-primary">Sign Up</a>
             </div>
           </div>
         </div>

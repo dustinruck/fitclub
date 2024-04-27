@@ -10,7 +10,7 @@ const Explore = ({fitnessImages}) => {
       <div className="columns is-mobile  ">
         <div className="column is-half is-offset-one-quarter mt-6">
           <p className="is-size-2 has-text-centered has-text-weight-bold has-text-black">
-            Unlimited Classes
+            Unlimited Fitness Gains
           </p>
         </div>
       </div>
@@ -18,7 +18,7 @@ const Explore = ({fitnessImages}) => {
       <div className="columns is-mobile  ">
         <div className="column is-half is-offset-one-quarter">
           <p className="is-size-6 has-text-centered has-text-black ">
-            Unlock your fitness potential with our exclusive offer of unlimited
+            Unlock your fitness potential with our exclusive offer of
             access to our fitness club. Embrace a healthier lifestyle and
             achieve your goals with unrestricted gym access and a wide range of
             classes tailored to your needs.

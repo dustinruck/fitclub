@@ -1,3 +1,5 @@
+// Header.js // src/component/Header.js //
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "bulma/css/bulma.min.css";
@@ -5,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Modal, ModalHeader, ModalBody, Button } from 'reactstrap'; // Import Modal components from reactstrap
 
-// Assuming LoginModal is a component you have that handles the login form
-import Login from './LoginModal'; 
+// Assuming Login is a component you have that handles the login form
+import Login from './LoginForm'; 
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -24,7 +26,7 @@ const Header = () => {
     <>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="/">
+          <a className="navbar-brand" href="/">
             <img src="https://raw.githubusercontent.com/dustinruck/fitclub/FE/fitnessclub-fe/src/FITCLUB-logo-white.png" alt="Logo"      style={{ 
         zIndex: 1, 
         width: '5rem',

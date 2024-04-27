@@ -6,7 +6,7 @@
 
 
 const Payment = () => {
-<p>This is the payment page.</p>
+<p class="has-text-white">This is the payment page.</p>
 };
 
 // const Payment = () => {

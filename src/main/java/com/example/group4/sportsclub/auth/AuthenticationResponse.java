@@ -1,3 +1,5 @@
+// AuthenticationResponse.java // src/main/java/com/example/group4/sportsclub/auth/AuthenticationResponse.java //
+
 package com.example.group4.sportsclub.auth;
 
 import com.fasterxml.jackson.annotation.JsonProperty;

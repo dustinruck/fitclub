@@ -43,19 +43,19 @@ const Footer = () => {
 
             <p className="bd-footer-link">
               <a href="https://">
-                <span className="icon-text">
+                <span className="icon-text has-text-white">
                   <span>Practice</span>
                 </span>
               </a>
               <br />
               <a href="https://">
-                <span className="icon-text">
+                <span className="icon-text has-text-white">
                   <span>Blogs</span>
                 </span>
               </a>
               <br />
               <a href="https://">
-                <span className="icon-text has-text-vimeo
+                <span className="icon-text
                 has-text-white">
                   <span>Careers</span>
                 </span>
@@ -75,19 +75,19 @@ const Footer = () => {
 
             <p className="bd-footer-link">
               <a href="https://">
-                <span className="icon-text">
+                <span className="icon-text has-text-white">
                   <span>Email</span>
                 </span>
               </a>
               <br />
               <a href="https://">
-                <span className="icon-text">
+                <span className="icon-text has-text-white">
                   <span>Call Us</span>
                 </span>
               </a>
               <br />
               <a href="https://">
-                <span className="icon-text">
+                <span className="icon-text has-text-white">
                   <span>Chat with us!</span>
                 </span>
               </a>
