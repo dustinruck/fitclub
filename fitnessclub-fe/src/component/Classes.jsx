@@ -12,7 +12,7 @@ const Classes = () => {
     <div className="columns is-multiline">
       {classesData.map(classItem => (
         <div className="column is-one-third" key={classItem.name}>
-          <div className="card">
+          <div className="card" id='classes'>
             <div className="card-image">
               <figure className="image is-4by3">
                 <img src={classItem.imageUrl} alt={classItem.name} />

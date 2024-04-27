@@ -25,9 +25,9 @@ const AboutClub = () => {
           <div className="column is-2"></div>
           <div className="column is-2"></div>
           <div className="column is-2   is-centered">
-          <Link className=" has-text-weight-bold button is-dark is-meduim  check mt-6 mb-6  ">
+          <a href="mailto:tour@fitclub.com" className="button is-dark is-medium check mt-6 mb-6 has-text-weight-bold">
               SCHEDULE A TOUR
-            </Link>
+            </a>
           </div>
             
           

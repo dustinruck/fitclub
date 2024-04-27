@@ -13,7 +13,7 @@ const Trainers = () => {
     <div className="columns is-multiline">
       {trainersData.map(trainer => (
         <div className="column is-one-third" key={trainer.name}>
-          <div className="card">
+          <div className="card" id='trainers'>
             <div className="card-image">
               <figure className="image is-4by3">
                 <img src={trainer.imageUrl} alt={trainer.name} />
@@ -22,7 +22,7 @@ const Trainers = () => {
             <div className="card-content">
               <p className="title is-4">{trainer.name}</p>
               <p className="subtitle is-6">
-                <NavLink to={`/classes?specialty=${trainer.specialty}`}>{trainer.specialty}</NavLink>
+                <NavLink to={`#classes`}>{trainer.specialty}</NavLink>
               </p>
               <div className="content">
                 {trainer.bio}

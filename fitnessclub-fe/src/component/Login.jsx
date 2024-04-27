@@ -1,126 +1,133 @@
-// import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCheck } from "@fortawesome/free-solid-svg-icons";
-// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-// import { faLock } from "@fortawesome/free-solid-svg-icons";
-// import Header from "./Header";
-// import  '../css/login.css';
-// const Login = () => {
-//   return (
-//     <>
-//       <Header />
+import { useRef, useState, useEffect } from 'react';
 
-//       <div className="login-container ">
-//         <div className="field">
-//           <p className="control has-icons-left has-icons-right">
-//             <input
-//               className="input is-medium"
-//               type="email"
-//               placeholder="Email"
-//             />
-//             <span className="icon is-medium is-left">
-//               <FontAwesomeIcon icon={faEnvelope} />
-//             </span>
-//             <span className="icon is-small is-right">
-//               <FontAwesomeIcon icon={faCheck} />
-//             </span>
-//           </p>
-//         </div>
-//         <div className="field">
-//           <p className="control has-icons-left">
-//             <input
-//               className="input is-medium"
-//               type="password"
-//               placeholder="Password"
-//             />
-//             <span className="icon is-small is-left">
-//               <FontAwesomeIcon icon={faLock} />
-//             </span>
-//           </p>
-//         </div>
-//         <div className="field">
-//           <p className="control">
-//             <button className="button is-dark is-fullwidth">Login</button>
-//           </p>
-//         </div>
-//         <div className="field">
-//           <p className="control">
-//               <a className="has-text-black has-text-weight-semibold">
-//                 Forget Password
-//               </a>
-//               <p>  </p>
-//               <a className="has-text-black has-text-weight-semibold">
-//                 Create Account
-//               </a>
-//           </p>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-// export default Login;
-
-import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+// Reactstrap
+import {
+    Row,
+    Col,
+    Form,
+    FormGroup,
+    Input
+} from "reactstrap";
 import Header from './Header';
+import Footer from './Footer';
 
-function Login() {
-    const [formData, setFormData] = useState({
-        username: '',
-        password: '',
-    });
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
+import axios from '../api/axiosConfig';
+const LOGIN_URL = '/auth/login';
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.id]: e.target.value });
-    }
+const Login = ({ props }) => {
+
+    const userRef = useRef();
+    const errRef = useRef();
+    const [email, setEmail] = useState(props.email ? props.email : '');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
+
+    useEffect(() => {
+        setErrorMessage('');
+    }, [email, password])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post('/api/v1/auth/authenticate', {
-                username: formData.username,
-                password: formData.password,
-            });
 
-            if (response.status === 200) {
-                localStorage.setItem('token', response.data.token);
-                navigate('/classes');  // Use navigate instead of history.push
+        try {
+            const response = await axios.post(LOGIN_URL,
+               { email, password }
+            );
+            console.log(JSON.stringify(response?.data));
+
+            const token = response?.data?.token;
+            const refreshToken = response?.data?.refreshToken;
+            // const isAdmin = response?.data?.isAdmin;
+            const userId = response?.data?.userId;
+            const email = response?.data?.email;
+            sessionStorage.setItem('token', token);
+            sessionStorage.setItem('refreshToken', refreshToken);
+            // sessionStorage.setItem('isAdmin', isAdmin);
+            sessionStorage.setItem('userId', userId);
+            sessionStorage.setItem('email', email);
+
+
+            setEmail('');
+            setPassword('');
+            setSuccess(true);
+
+            props.onSubmitProp(true, "Logged in successfully!", email);
+
+        } catch (err) {
+
+            if (!err?.response) {
+                props.onSubmitProp(false, 'No Server Response', null);
+            } else if (err.response?.data?.message) {
+                console.log(err);
+                console.log(err.response.data.message);
+                props.onSubmitProp(false, err.response.data.message, null);
             } else {
-                setError("Invalid username or password");
+                console.log(err);
+                props.onSubmitProp(false, "Login failed", null);
             }
-        } catch (error) {
-            console.error("Login error", error);
-            setError("Invalid username or password");
-        }
+            errRef.current.focus();
+        } 
     }
 
     return (
-        <div>
+        <>
             <Header />
-            <h1>Login</h1>
-            {error && <Alert variant="danger">{error}</Alert>}
-            <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="username">
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control type="text" placeholder="Username" value={formData.username} onChange={handleChange} />
-                </Form.Group>
+            <div className="content">
+                <p ref={errRef} className={errorMessage ? "errorMessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
+                <Form onSubmit={handleSubmit}>
+                    <Row>
+                        <Col className="pr-md-1">
+                            <FormGroup>
+                                <label htmlFor="email">Email:</label>
+                                <Input
+                                    type="text"
+                                    id="email"
+                                    ref={userRef}
+                                    autoComplete="off"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                    required
+                                    defaultValue={props.email ? props.email : ''}
+                                />
+                            </FormGroup>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="pr-md-1">
+                            <FormGroup>
+                                <label htmlFor="password">Password:</label>
+                                <Input
+                                    type="password"
+                                    id="password"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={password}
+                                    required
+                                />
+                            </FormGroup>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="pl-md-1">
+                            <button className='btn btn-success'>Sign In</button>
+                        </Col>
+                    </Row>
+                </Form>
 
-                <Form.Group controlId="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" value={formData.password} onChange={handleChange} />
-                </Form.Group>
-
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
-        </div>
-    );
+                {/* <p>
+                    Don't have an account?<br />
+                    <span className="line">
+                        <a href="#">Sign Up</a>
+                    </span>
+                </p> */}
+            </div>  
+            <Footer />
+        </>
+    )
 }
 
 export default Login;
