@@ -19,7 +19,7 @@ import Pricing from './component/Pricing';
 import Pay from './component/Pay';
 import Success from './component/Success';
 import Fail from './component/Fail';
-import Auth from './component/Auth';
+import Auth from './context/Auth';
 
 const router = createBrowserRouter([
   {

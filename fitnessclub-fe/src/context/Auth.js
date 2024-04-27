@@ -26,8 +26,13 @@ export const Auth = ({ children }) => {
     };
 
     const onSubmitProp = (success, message, email) => {
-        // need to add submit logic here
-        console.log('Submit result:', success, message, email);
+        if (success) {
+            console.log("Login successful:", message);
+            // we fetch user details here, or they are returned in the login response hopefully??
+            login('token_received_from_server', { email: email, name: 'User Name' });
+        } else {
+            console.error("Login failed:", message);
+        }
     };
 
     return (
