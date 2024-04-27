@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import Login from './component/Login';
 import Classes from './component/Classes';
 // import DataFetcher from './api/DataFetcher';
-import Add from './component/Add';
+import Payment from './component/Payment';
 import Contact from './component/Contact';
 import Trainers from './component/TrainersPage';
 import Register from './component/Register';
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
     
   },
   {
-    path:'/addtrainers',
-    element:<Add/>,
+    path:'/payment',
+    element:<Payment/>,
   },
   {
     path:'/contact',
